@@ -21,25 +21,25 @@
 ## 项目截图
 <div style="text-align: center;">
     <img src="http://t.cn/R6trftr" style="width: 80%" />
-    <p style="text-align: center; width: 100%;">Fig. 登录</p>
+    <p align="center">Fig. 登录</p>
 </div>
 <br/>
 <div style="text-align: center;">
     <img src="http://t.cn/R6tBj7u" style="width: 80%" />
-    <p style="text-align: center; width: 100%;">Fig. 功能选择</p>
+    <p align="center">Fig. 功能选择</p>
 </div>
 <br/>
 <div style="text-align: center;">
     <img src="http://t.cn/R6trpsE" style="width: 80%" />
-    <p style="text-align: center; width: 100%;">Fig. 教师录入页</p>
+    <p align="center">Fig. 教师录入页</p>
 </div>
 <br/>
 <div style="text-align: center;">
     <img src="http://t.cn/R6trYGY" style="width: 80%" />
-    <p style="text-align: center; width: 100%;">Fig. 学生信息录入页</p>
+    <p align="center">Fig. 学生信息录入页</p>
 </div>
 <br/>
 <div style="text-align: center;">
     <img src="http://t.cn/R6trm0h" style="width: 80%" />
-    <p style="text-align: center; width: 100%;">Fig. 考核页</p>
+    <p align="center">Fig. 考核页</p>
 </div>
