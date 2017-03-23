@@ -1,0 +1,7 @@
+@font-face {
+  font-family: YaHei;
+  src: url("../../fonts/msyh.ttc"); }
+body, input, textarea {
+  font-family: "YaHei";
+  margin: 0;
+  padding: 0; }

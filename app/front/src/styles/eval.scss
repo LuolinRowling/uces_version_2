@@ -1,0 +1,200 @@
+.eval {
+	background-image: url('../../img/eval_bg.jpg');
+	background-size: 100% 100%;
+	min-width: 1200px !important;
+	
+	.title {
+		text-align: center;
+		font-size: 48px;
+		margin: 15px;
+		margin-top: 30px;
+
+		.backToSelect {
+			font-size: 16px;
+			padding-left: 10px;
+			vertical-align: bottom;
+			margin-bottom: 5px;
+			display: inline-block;
+			cursor: pointer;
+		}
+	}
+
+	.container {
+		color: #fff;
+		margin: 0 15px;
+
+		.school-item {
+			display: inline-block;
+			width: 25%;
+			float: left;
+			height: 200px;
+			text-align: center;
+
+			.school-item-box {
+				width: 100%;
+				height: 100%;
+				padding: 15px;
+				box-sizing: border-box;   
+				-webkit-box-sizing:border-box;   
+				-moz-box-sizing: border-box;  
+				line-height: 170px;
+
+				.school-name {
+					font-size: 3rem;
+					font-weight: bold;
+					cursor: pointer;
+					border-radius: 10px;
+				}
+			}
+		
+		}
+
+		.backTo {
+			width: 100%;
+			text-align: center;
+			margin-bottom: 8px;
+
+			span {
+				font-size: 16px;
+				color: #000;
+				cursor: pointer;
+			}
+		}
+	}
+
+	&.eval-student{
+		.title {
+			margin: 24px;
+		}
+		.container {
+			margin: 20px 80px;
+			margin-top: 0px;
+			background:rgba(255, 255, 255, 0.5);
+			height: 740px;
+			
+			.row {
+				height: 100%;
+				width: 100%;
+			}
+
+			.pic-block-layer {
+				width: 30%;
+				height: 100%;
+				float: left;
+				box-sizing: border-box;   
+				-webkit-box-sizing:border-box;   
+				-moz-box-sizing: border-box;  
+				padding: 90px 60px;
+				padding-right: 0;
+
+				.pic-block {
+					background: rgba(218, 227, 243, 1);
+					height: 100%;
+					width: 100%;
+					padding-top: 40px;
+					margin-top: -20px;
+				}
+
+				.pic {
+					background: #eee;
+					height: 320px;
+					width: 240px;
+					margin: auto;
+
+					img {
+						height: 320px;
+						width: 240px;
+					}
+				}
+
+				.oper-btn {
+					margin-top: 16px;
+					text-align: center;
+					width: 100%;
+
+					span {
+						display: inline-block;
+						width: 40%;
+						height: 40px;
+						line-height: 40px;
+						font-size: 20px;
+						background: rgba(32, 56, 100, 1);
+						cursor: pointer;
+					}
+				}
+
+				.search-block {
+					margin-top: 25px;
+					text-align: center;
+					width: 100%;
+
+					input {
+						width: 82%;
+						line-height: 32px;
+						font-size: 16px;
+						padding: 0 4px;
+						box-sizing: border-box;   
+						-webkit-box-sizing:border-box;   
+						-moz-box-sizing: border-box;  
+					}
+
+				}
+
+				.back-btn {
+					margin-top: 16px;
+					text-align: center;
+
+					span {
+						display: inline-block;
+						width: 81%;
+						line-height: 40px;
+						font-size: 20px;
+						background: rgba(32, 56, 100, 1);
+						cursor: pointer;
+					}
+				}
+			}
+
+			.info-block-layer {
+				width: 70%;
+				height: 100%;
+				float: left;
+				box-sizing: border-box;   
+				-webkit-box-sizing:border-box;   
+				-moz-box-sizing: border-box;  
+				padding: 30px 60px;
+				padding-left: 0;
+
+				.info-block {
+					background: rgba(188, 206, 234, 1);
+					height: 100%;
+					box-shadow: -5px 2px 5px rgba(0, 0, 0, 0.3);
+					-webkit-box-shadow: -5px 2px 5px rgba(0, 0, 0, 0.3);
+					-moz-box-shadow: -5px 2px 5px rgba(0, 0, 0, 0.3);
+					
+					table {
+						width: 100%;
+						height: 100%;
+						color: #000;
+						padding: 30px;
+						font-size: 22px;
+
+						td {
+							background: rgba(255,255,255,0.3);
+							padding: 0 10px;
+						}
+
+						.content {
+							display: inline-block;
+							height: 100px;
+							overflow-y: auto;
+						}
+						.bold {
+							font-weight: bold;
+						}
+					}
+				}
+			}
+		}
+	}
+}

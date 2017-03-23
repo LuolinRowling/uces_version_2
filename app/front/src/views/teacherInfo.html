@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8"/>
+		<script type="text/javascript" src="../scripts/vue.js"></script>
+		<script type="text/javascript" src="../scripts/zepto.min.js"></script>
+		<script type="text/javascript" src="../scripts/common.js"></script>
+		<script type="text/javascript" src="../scripts/teacherInfo.js" charset="utf-8"></script>
+		<link type="text/css" href="../styles/css/common.css" rel="stylesheet"/>
+		<link type="text/css" href="../styles/css/info.css" rel="stylesheet" />
+		<title>辅导员考核系统 - uces</title>
+	</head>
+	<body id="teacherInfo" onload="load()">
+		<div class="nav">
+			<div class="logo">辅导员考核系统</div>
+			<div class="user"><i class="iconfont">&#xe787;</i>Administrator</div>
+		</div>
+		<div class="content">
+			<div class="sidebar">
+				<div class="func-item js-teacherInfo">
+					<div class="func-icon"><i class="iconfont">&#xe745;</i></div>
+					<div class="func-name"><span>考核教师信息录入</span></div>
+				</div>
+				<div class="func-item js-reboot">
+					<div class="func-icon"><i class="iconfont">&#xe747;</i></div>
+					<div class="func-name"><span>一键重置</span></div>
+				</div>
+				<div class="func-item js-function">
+					<div class="func-icon"><i class=  "iconfont">&#xe750;</i></div>
+					<div class="func-name"><span>返回功能选择</span></div>
+				</div>
+				<div class="side-copyright">Copyright © 2016 Luo Lin 版权所有</div>
+			</div>
+			<div class="main-block">
+				<div class="teacherInfo-hd">
+					<span class="title"><strong>考核教师</strong></span>
+					<span class="teacher-count">共 <i>{{ teachers.length }}</i> 人</span>
+					<div class="operation-box">
+						<span class="btn btn-green js-addTeacher">增加</span>
+						<span class="btn btn-red js-delete">删除</span>
+					</div>
+				</div>
+				<div class="teacherInfo-bd">
+					<table cellpadding="0" cellspacing="0" border="0">
+						<thead>
+							<tr>
+								<th><input type="checkbox" class="js-selectAll"/></th>
+								<th>学院</th>
+								<th>姓名</th>
+								<th>信息录入人数 / 照片录入人数</th>
+								<th>操作</th>
+							</tr>
+						</thead>
+						<tbody>
+							<tr v-for="teacher in teachers" data-id="{{ teacher.id }}">
+								<td><input type="checkbox" class="js-selectOne"/></td>
+								<td class="js-school">{{ teacher.school }}</td>
+								<td class="js-name">{{ teacher.name }}</td>
+								<td>{{ teacher.count }}</td>
+								<td>
+									<span class="btn btn-orange" v-on:click="input">录入学生</span>
+									<span class="btn btn-yellow" v-on:click="clear">清空学生</span>
+								</td>
+							</tr>
+						</tbody>
+					</table>
+				</div>
+			</div>
+		</div>
+		<div class="modal">
+			<div class="modal-content">
+				<span class="title"><strong>增加考核老师</strong></span>
+				<div class="item">
+					<div class="text">姓名：</div>
+					<div class="input">
+						<input class="teacher_name" type="text" />
+					</div>
+				</div>
+				<div class="item">
+					<div class="text">学院（简称）：</div>
+					<div class="input">
+						<input type="text" class="school_name" list="school-option" />
+						<datalist id="school-option">
+							<option>电信学院</option>
+							<option>计算机学院</option>
+							<option>经管学院</option>
+							<option>运输学院</option>
+							<option>土建学院</option>
+							<option>机电学院</option>
+							<option>电气学院</option>
+							<option>理学院</option>
+							<option>法学院</option>
+							<option>语传学院</option>
+							<option>软件学院</option>
+							<option>建艺学院</option>
+						</datalist>
+					</div>				
+				</div>
+				<div class="operation-box"><span class="btn btn-green js-submit">确认</span><span class="btn btn-red js-cancel">取消</span></div>
+			</div>
+		</div>
+	</body>
+</html>

@@ -1,0 +1,26 @@
+{
+  "name": "uces",
+  "version": "0.0.1",
+  "description": "University Counsellor Evaluation System",
+  "main": "index.js",
+  "scripts": {
+    "start": "node app/server/index.js\nnode app/server/imgServer.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git@git.coding.net:luolin_rowling/uces.git"
+  },
+  "author": "Luo Lin",
+  "license": "MIT",
+  "dependencies": {
+    "async": "^2.1.4",
+    "body-parser": "^1.15.2",
+    "express": "^4.14.0",
+    "lodash": "^4.16.4",
+    "mysql": "^2.11.1",
+    "node-pinyin": "^0.2.3"
+  },
+  "devDependencies": {
+    "xlsx": "^0.8.0"
+  }
+}

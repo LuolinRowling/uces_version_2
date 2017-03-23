@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8"/>
+		<script type="text/javascript" src="../scripts/vue.js"></script>
+		<script type="text/javascript" src="../scripts/zepto.min.js"></script>
+		<script type="text/javascript" src="../scripts/common.js"></script>
+		<script type="text/javascript" src="../scripts/eval.js" charset="utf-8"></script>
+		<link type="text/css" href="../styles/css/common.css" rel="stylesheet"/>
+		<link type="text/css" href="../styles/css/eval.css" rel="stylesheet" />
+		<title>辅导员考核系统 - uces</title>
+	</head>
+	<body class="eval eval-student" id="evalStudent">
+		<div class="title"><strong>{{ school }} - {{ name }}</strong></div>
+		<div class="container">
+            <div class="row">
+                <div class="pic-block-layer">
+                    <div class="pic-block">
+                        <div class="pic">
+                            <img v-bind:src="imgSrc"/>
+                        </div>
+                        <div class="search-block">
+                            <input class="inputStudentId" placeholder="请输入要查询的学号" />
+                        </div>
+                        <div class="oper-btn">
+                            <span v-if="rollOn" v-on:click="switchRoll">暂　停</span>
+                            <span v-else v-on:click="switchRoll">开　始</span>
+                            <span v-on:click="showMoreInfo">查　看</span>
+                        </div>
+                        <div class="back-btn" v-on:click="searchStudentById">
+                            <span>按学号查询</span>
+                        </div>
+                        <div class="back-btn" v-on:click="backToTeacherSelect">
+                            <span>返回教师选择</span>
+                        </div>
+                    </div>
+                </div>
+                <div class="info-block-layer">
+                    <div class="info-block">
+                        <table>
+                            <tr>
+                                <td class="bold">学号：</td>
+                                <td>{{ evalStudentInfo.student_id }}</td>
+                                <td class="bold">姓名：</td>
+                                <td>{{ evalStudentInfo.student_name }}</td>
+                            </tr>
+                            <tr>
+                                <td class="bold">班级：</td>
+                                <td>{{ evalStudentInfo.class }}</td>
+                                <td class="bold">宿舍：</td>
+                                <td>{{ evalStudentInfo.dorm_id }}</td>
+                            </tr>
+                            <tr>
+                                <td class="bold">专业：</td>
+                                <td>{{ evalStudentInfo.major }}</td>
+                                <td class="bold">生源地：</td>
+                                <td>{{ evalStudentInfo.origin }}</td>
+                            </tr>
+                            <tr>
+                                <td class="bold">政治面貌：</td>
+                                <td>{{ evalStudentInfo.party }}</td>
+                                <td class="bold">学习排名：</td>
+                                <td>{{ evalStudentInfo.study }}</td>
+                            </tr>
+                            <tr>
+                                <td class="bold">家庭经济：</td>
+                                <td>{{ evalStudentInfo.family }}</td>
+                                <td class="bold">是否干部：</td>
+                                <td>{{ evalStudentInfo.isleader }}</td>
+                            </tr>
+                            <tr>
+                                <td colspan="4" class="bold">其他情况：</td>
+                            </tr>
+                            <tr>
+                                <td colspan="4"><span class="content" style="height: 117px">{{ evalStudentInfo.others }}</span></td>
+                            </tr>
+                            <tr>
+                                <td colspan="4" class="bold">辅导情况：</td>
+                            </tr>
+                            <tr>
+                                <td colspan="4"><span class="content">{{ evalStudentInfo.guidance }}</span></td>
+                            </tr>
+                        </table>
+                    </div>
+                </div>
+            </div>
+			
+		</div>
+	</body>
+</html>

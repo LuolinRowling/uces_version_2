@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8"/>
+		<script type="text/javascript" src="../scripts/vue.js"></script>
+		<script type="text/javascript" src="../scripts/zepto.min.js"></script>
+		<script type="text/javascript" src="../scripts/common.js"></script>
+		<script type="text/javascript" src="../scripts/select.js" charset="utf-8"></script>
+		<link type="text/css" href="../styles/css/common.css" rel="stylesheet"/>
+		<link type="text/css" href="../styles/css/eval.css" rel="stylesheet" />
+		<title>辅导员考核系统 - uces</title>
+	</head>
+	<body class="eval" id="teacherSelect">
+		<div class="title"><strong>辅导员考核</strong><span class="backToSelect">返回</span></div>      
+		<div class="container">
+			<div v-on:click ="evalTeacher" v-for="teacher in teachers" class="school-item" data-school="{{ teacher.school }}" data-id="{{ teacher.id }}" data-schoolid="{{ teacher.school_id }}">
+				<div class="school-item-box">
+					<div class="school-name" style="background: #2c318d;">
+                        {{ teacher.name }}
+					</div>
+				</div>
+			</div>
+		</div>
+        <div class="backTo js-back"></div>
+	</body>
+</html>

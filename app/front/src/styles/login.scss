@@ -1,0 +1,113 @@
+$def_green_bg: #16A085;
+$def_green: #1ABC9C;
+$def_green_transparent: rgba(26, 188, 156, 0.5);
+$def_shadow_color: rgba(0, 0, 0, 0.2);
+$def_placeholder_color: rgba(255, 255, 255, 0.8);
+
+@font-face {
+	font-family: YaHei;
+	src: url('../../fonts/msyh.ttc');
+}
+
+body, input, textarea {
+	font-family: "YaHei";
+	margin: 0;
+	padding: 0;
+}
+
+.account-body {
+	background: $def_green_bg;
+}
+
+.login-block {
+	background: $def_green_transparent;
+	box-shadow: 0px 0px 10px $def_shadow_color;
+	-webkit-box-shadow: 0px 0px 10px $def_shadow_color;
+	-moz-box-shadow: 0px 0px 10px $def_shadow_color;
+	width: 300px;
+	height: 224px;
+	text-align: center;
+	margin: auto auto;
+	position: absolute;
+	top: 0;
+	bottom: 0;
+	left: 0;
+	right: 0;
+
+	.login-block-title {
+		color: #fff;
+		margin: 15px 0;
+		margin-bottom: 12px;
+
+		p {
+			margin: 5px;
+		}
+	
+		.title-CHN {
+			font-size: 20px;
+		}
+
+		.title-ENG {
+			font-size: 12px;
+		}
+	}
+
+	.input-item {
+		background: rgba(255, 255, 255, 0.3);
+		margin: 0 28px;
+		line-height: 32px;
+		margin-bottom: 5px;
+
+		.input-block {
+			color: #fff;
+			border: none;
+			background: transparent;
+			line-height: 32px;
+			outline: none;
+			margin: 0;
+			padding: 0;
+			width: 80%;	
+		}
+	}
+
+	.button-item {
+		cursor: pointer;
+		background: #048F74;
+		margin: 5px 28px;
+		line-height: 32px;
+		
+		span {
+			font-size: 14px;
+			color: #fff;
+			line-height: 32px;
+		}
+	}
+
+	.copyright {
+		color: rgba(255, 255, 255, 0.5);
+		margin: 10px;
+		font-size: 12px;
+	}
+}
+
+:-moz-placeholder { /* Mozilla Firefox 4 to 18 */
+	font-family: "YaHei";
+    color: $def_placeholder_color;  
+}
+
+::-moz-placeholder { /* Mozilla Firefox 19+ */
+    font-family: "YaHei";
+    color: $def_placeholder_color;
+}
+
+input:-ms-input-placeholder,
+textarea:-ms-input-placeholder {
+    font-family: "YaHei";
+    color: $def_placeholder_color;
+}
+
+input::-webkit-input-placeholder,
+textarea::-webkit-input-placeholder {
+    font-family: "YaHei";
+    color: $def_placeholder_color;
+}

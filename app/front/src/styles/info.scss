@@ -1,0 +1,460 @@
+$def_shadow_color: rgba(0, 0, 0, 0.5);
+
+@font-face {
+	font-family: 'iconfont';
+    src: url('../../fonts/iconfont.eot'); /* IE9*/
+    src: url('../../fonts/iconfont.eot?#iefix') format('embedded-opentype'), /* IE6-IE8 */
+    url('../../fonts/iconfont.woff') format('woff'), /* chrome、firefox */
+    url('../../fonts/iconfont.ttf') format('truetype'), /* chrome、firefox、opera、Safari, Android, iOS 4.2+*/
+    url('../../fonts/iconfont.svg#iconfont') format('svg'); /* iOS 4.1- */
+}
+
+.iconfont {
+    font-family:"iconfont" !important;
+    font-size:16px;font-style:normal;
+    -webkit-font-smoothing: antialiased;
+    -webkit-text-stroke-width: 0.2px;
+    -moz-osx-font-smoothing: grayscale;
+}
+
+.nav {
+	height: 44px;
+	width: 100%;
+	background: #373737;
+	box-shadow: 0px 0px 10px $def_shadow_color;
+	-webkit-box-shadow: 0px 0px 10px $def_shadow_color;
+	-moz-box-shadow: 0px 0px 10px $def_shadow_color;
+	position: absolute;
+	top: 0;
+
+	.logo {
+		display: inline-block;
+		height: 44px;
+		width: auto;
+		line-height: 44px;
+		color: #fff;
+		margin-left: 24px;
+		float: left;
+	}
+
+	.user {
+		line-height: 44px;
+		color: #fff;
+		float: right;
+		margin-right: 24px;
+	
+		i {
+			margin-right: 8px;
+		}
+	}
+}
+
+.content {
+	position: absolute;
+	top: 44px;
+	bottom: 0;
+	left: 0;
+	right: 0;
+
+	min-width: 1100px !important;
+	min-height: 800px !important;
+
+	.sidebar {
+		width: 240px;
+		height: 100%;
+		background: #F2F2F0;
+		box-shadow: 0px 0px 10px $def_shadow_color;
+		-webkit-box-shadow: 0px 0px 10px $def_shadow_color;
+		-moz-box-shadow: 0px 0px 10px $def_shadow_color;
+		display: inline-block;
+		position: relative;
+		float: left;
+
+		&.hide {
+			display: none;
+		}
+
+		.func-item {
+			height: 44px;
+			background: #F2F2EA;
+			border-bottom: 1px solid #E6E6DE;
+			cursor: pointer;
+
+			&:hover {
+				background: #E6E6E4;
+			}
+
+			.func-icon {
+				height: 44px;
+				width: 44px;
+				background: #DD6B61;
+				color: #fff;
+				display: inline-block;
+	            vertical-align: middle;	
+	            float: left;
+	            text-align: center;
+
+	            i {
+	            	line-height: 44px;
+	            }
+			}
+
+			.func-name {
+				height: 44px;
+				width: auto;
+				line-height: 44px;
+				display: inline-block;
+				float: left;
+
+				span {
+					margin-left: 16px;
+				}
+			}
+		}
+
+		.side-copyright {
+			width: 100%;
+			text-align: center;
+			position: absolute;
+			bottom: 12px;
+			font-size: 12px;
+			color: #666;
+		}
+	}
+
+	.main-block {
+		position: absolute;
+		left: 240px;
+		right: 0;
+		height: 100%;
+		display: inline-block;
+		float: left;
+
+		&.large {
+			left: 0;
+		}
+
+		.teacherInfo-hd {
+			margin: 16px;
+			position: relative;
+
+			.title {
+				font-size: 24px;
+			}
+
+			.teacher-count {
+				margin-left: 8px;
+				font-size: 16px;
+				color: rgba(0, 0, 0, 0.8);
+				vertical-align: -1px;
+
+				i {
+					font-style: normal;
+				}
+			}
+
+			.operation-box {
+				position: absolute;
+				right: 0;
+				bottom: 0;
+				text-align: center;
+				display: inline-block;
+				height: 25px;
+			}
+
+			.clear {
+				display: inline-block;
+				clear: both;
+			}
+
+		}
+
+		.teacherInfo-bd {
+			margin: 0 16px;
+
+
+			table {
+
+				text-align: center;
+				width: 100%;
+
+				tr:nth-child(odd) {
+					background: #F9F9F9;
+				}
+
+				th {
+					border-bottom: 2px solid #ddd;
+					padding: 12px;
+				}
+
+				td {
+					padding: 12px 5px;
+					font-style: normal;
+					border-top: 1px solid #ddd;
+				}
+			}
+		}
+
+
+		.studentInfo-hd {
+			margin: 16px;
+			position: relative;
+
+			.back-arrow {
+				font-size: 24px;
+				cursor: pointer;
+				margin-right: 4px;
+			}
+
+			.teacher-name {
+				font-size: 24px;
+			}
+
+			.student-count {
+				margin-left: 8px;
+				font-size: 16px;
+				color: rgba(0, 0, 0, 0.8);
+				vertical-align: -1px;
+
+				i {
+					font-style: normal;
+				}
+			}
+
+			.operation-box {
+				position: absolute;
+				right: 0;
+				bottom: 0;
+				text-align: center;
+				display: inline-block;
+				height: 25px;
+			}
+		}
+
+		.studentInfo-bd {
+			margin: 0 16px;
+
+			table {
+				font-size: 14px;
+
+				text-align: center;
+				width: 100%;
+				table-layout: fixed;
+
+
+				th {
+					border-bottom: 2px solid #ddd;
+					padding: 12px;
+				}
+
+
+				tr:nth-child(odd) {
+					background: #F9F9F9;
+				}
+
+				tbody {
+					tr {
+						cursor: pointer;
+
+						&:hover {
+							background: #ddd;
+						}
+					}
+
+					td {
+						padding: 12px 5px;
+						font-style: normal;
+						border-top: 1px solid #ddd;
+
+						span {
+							vertical-align: middle;
+							display: inline-block;
+							width: 100%;
+							overflow: hidden;
+							white-space: nowrap;
+							text-overflow: ellipsis;
+						}
+
+						&.hasPhoto {
+							color: #8BC58A;
+						}
+					}
+				}
+			}
+
+
+			.pagination {
+				text-align: center;
+				margin: 20px;
+
+				.page {
+					font-style: normal;
+					margin: 0 4px;
+
+					i {
+						font-style: normal;
+					}				
+				}
+			}
+		}
+	}
+
+}
+
+.modal {
+	display: none;
+	background: rgba(0, 0, 0, 0.6);
+	position: absolute;
+	top: 0;
+	bottom: 0;
+	left: 0;
+	right: 0;
+	z-index: 9999;
+
+	&.show {
+		display: block;
+	}
+
+	.modal-content {
+		position: absolute;
+		top: 0;
+		bottom: 0;
+		left: 0;
+		right: 0;
+		height: 256px;
+		width: 320px;
+		background: #fff;
+		box-shadow: 3px 3px 3px rgba(0,0,0, 0.5);
+		-webkit-box-shadow: 3px 3px 3px rgba(0,0,0, 0.5);
+		-moz-box-shadow: 3px 3px 3px rgba(0,0,0, 0.5);
+		margin: auto;
+	
+		.title {
+			display: block;
+			margin: 16px;
+			font-size: 24px;
+		}
+
+		.item {
+		    margin: 0 16px;
+			margin-right: 18px;
+			
+			.text {
+				margin-bottom: 8px;
+			}
+
+			.input {
+				margin-bottom: 8px;
+				
+				input {
+					width: 100%;
+					box-sizing: border-box;   
+					-webkit-box-sizing:border-box;   
+					-moz-box-sizing: border-box;  
+					line-height: 24px;
+					padding: 0px 8px;
+				}
+			}
+		}
+
+		.operation-box {
+			text-align: center;
+			margin: 16px 0px;
+			width: 100%;
+			float: left;
+
+			span {
+				margin: 0px 8px;
+			}
+		}
+ 
+		&.student {
+			width: 560px;
+			height: 720px;
+
+			.row {
+				width: 100%;
+			}
+
+			.sm-item {
+				width: 50%;
+				display: inline-block;
+				float: left;
+			}
+
+			.ful-item {
+				width: 100%;
+				display: block;
+				float: left;
+			}
+
+			.item-content {
+				width: 100%;
+				margin-top: 8px;
+				padding: 0 16px;
+				box-sizing: border-box;   
+				-webkit-box-sizing:border-box;   
+				-moz-box-sizing: border-box;  
+				.text {
+					margin-bottom: 8px;
+				}
+		
+				input {
+					box-sizing: border-box;   
+					-webkit-box-sizing:border-box;   
+					-moz-box-sizing: border-box;  
+					width: 100%;
+					line-height: 24px;
+					padding: 0px 8px;
+				}
+
+				textarea {
+					width: 100%;
+					box-sizing: border-box;   
+					-webkit-box-sizing:border-box;   
+					-moz-box-sizing: border-box;  
+					line-height: 24px;
+					padding: 0 8px;
+					resize: none;
+				}
+			}
+		}
+	}
+
+
+}
+
+.btn {
+	color: #fff;
+	height: 24px;
+	width: 48px;
+	border-radius: 4px;
+	-webkit-border-radius: 4px;
+	padding: 4px 8px;
+	margin-left: 4px;
+	cursor: pointer;
+
+	&.btn-dark-green {
+		background: #5c825b;
+	}
+	
+	&.btn-green {
+		background: #8BC58A;
+	}
+
+	&.btn-red {
+		background: #DD6B61;
+	}
+
+	&.btn-yellow {
+		background: #f2da6d;
+	}
+
+	&.btn-blue {
+		background: #0086b3;
+	}
+
+	&.btn-orange {
+		background: #f0ad4e;
+	}
+}
